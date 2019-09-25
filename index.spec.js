@@ -1,10 +1,10 @@
 const { Wheat, Sugarcane } = require("./crops/crops.js");
 const { Pig, Cow, Horse } = require("./animals/animals.js");
+const { Farm } = require("./index");
 
 // TESTS
 
 // 1) test wether or not a new Farm can be created
-const { Farm } = require("./index");
 
 test("A new Farm can be created", () => {
   const farm = new Farm();
