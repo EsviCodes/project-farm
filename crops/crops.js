@@ -37,5 +37,4 @@ class Sugarcane extends Crop {
   }
 }
 
-console.log("test");
 module.exports = { Crop, Wheat, Sugarcane };
