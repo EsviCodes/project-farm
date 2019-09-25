@@ -1,8 +1,9 @@
 // class Animal
 
 class Animal {
-  constructor(age) {
+  constructor(age, name) {
     this.age = age;
+    this.name = name;
   }
   getWeightInKg() {
     return this.age * this.maxWeigth();
@@ -17,8 +18,8 @@ class Animal {
 
 // Pig class extended Animal
 class Pig extends Animal {
-  constructor(age) {
-    super(age);
+  constructor(age, name) {
+    super(age, name);
     this.weight = 2.3;
     this.boundary = 700;
     this.price = 4;
@@ -27,8 +28,8 @@ class Pig extends Animal {
 
 //  Cow class extended Animal
 class Cow extends Animal {
-  constructor(age) {
-    super(age);
+  constructor(age, name) {
+    super(age, name);
     this.weight = 1.5;
     this.boundary = 1200;
     this.price = 5;
@@ -37,8 +38,8 @@ class Cow extends Animal {
 
 // Horse class extended Animal
 class Horse extends Animal {
-  constructor(age) {
-    super(age);
+  constructor(age, name) {
+    super(age, name);
     this.weight = 1.7;
     this.boundary = 1000;
     this.price = 10;

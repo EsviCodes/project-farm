@@ -46,7 +46,7 @@ test("Animals will be taken into account for calculateIncome", () => {
 });
 
 // TEST calculateIncome() if the calculation is done correctly
-test("Animals will be taken into account for calculateIncome", () => {
+test("Animals & Crops will be taken into account for calculateIncome", () => {
   const farm = new Farm();
   farm.addCrop(new Wheat(100));
   farm.addCrop(new Sugarcane(100));
