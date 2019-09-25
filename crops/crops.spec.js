@@ -1,4 +1,4 @@
-const { Crop, Wheat, Sugercane } = require("./crops");
+const { Crop, Wheat, Sugarcane } = require("./crops");
 
 // TESTS CROP
 test("A crop can store its area size", () => {
@@ -18,14 +18,30 @@ test("The Wheat class calculates the proper yield", () => {
   expect(wheat.getYieldInKg()).toBeCloseTo(674.4, 2);
 });
 
-// TESTS SUGERCANE
+// TESTS SUGARCANE
 
-test("The Sugercane class can calculate a yield", () => {
-  const sugercane = new Sugercane(100);
-  expect(sugercane.getYieldInKg()).toBeDefined();
+test("The Sugarcane class can calculate a yield", () => {
+  const sugarcane = new Sugarcane(100);
+  expect(sugarcane.getYieldInKg()).toBeDefined();
 });
 
-test("The Sugercane class calculates the proper yield", () => {
-  const sugercane = new Sugercane(100);
-  expect(sugercane.getYieldInKg()).toBeCloseTo(453.38869055124377);
+test("The Sugarcane class calculates the proper yield", () => {
+  const sugarcane = new Sugarcane(100);
+  expect(sugarcane.getYieldInKg()).toBeCloseTo(453.38869055124377);
+});
+
+// TEST getYieldInEuros():
+test("Wheat class calculates the proper yield value", () => {
+  const wheat = new Wheat(100);
+  expect(wheat.getYieldInEuros()).toBeCloseTo(1011.6, 1);
+});
+
+test("Sugarcane class calculates the proper yield value", () => {
+  const sugarcane = new Sugarcane(200);
+  expect(sugarcane.getYieldInEuros()).toBeCloseTo(1943.7, 1);
+});
+
+test("Sugarcane class calculates the proper yield value", () => {
+  const sugarcane = new Sugarcane(0);
+  expect(sugarcane.getYieldInEuros()).toBe(0);
 });
