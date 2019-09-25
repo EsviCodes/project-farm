@@ -1,6 +1,12 @@
-// TESTS WHEAT
+const { Crop, Wheat, Sugercane } = require("./crops");
 
-const { Wheat } = require("./crops");
+// TESTS CROP
+test("A crop can store its area size", () => {
+  const crop = new Crop(12345);
+  expect(crop.acres).toBe(12345);
+});
+
+// TESTS WHEAT
 
 test("The Wheat class can calculate a yield", () => {
   const wheat = new Wheat(100);
@@ -13,8 +19,6 @@ test("The Wheat class calculates the proper yield", () => {
 });
 
 // TESTS SUGERCANE
-
-const { Sugercane } = require("./crops");
 
 test("The Sugercane class can calculate a yield", () => {
   const sugercane = new Sugercane(100);
