@@ -22,6 +22,9 @@ class Wheat extends Crop {
   getYieldInKg() {
     return Math.pow(this.acres * 1.5, 1.3);
   }
+  toString() {
+    return "Wheat";
+  }
 }
 
 // Sugercane-class
@@ -34,6 +37,9 @@ class Sugarcane extends Crop {
   }
   getYieldInKg() {
     return (this.acres * 2.6) ** 1.1;
+  }
+  toString() {
+    return "Sugarcane";
   }
 }
 
