@@ -30,7 +30,7 @@ test("The Sugarcane class calculates the proper yield", () => {
   expect(sugarcane.getYieldInKg()).toBeCloseTo(453.38869055124377);
 });
 
-// TEST getYieldInEuros():
+// TEST getYieldInEuros();
 test("Wheat class calculates the proper yield value", () => {
   const wheat = new Wheat(100);
   expect(wheat.getYieldInEuros()).toBeCloseTo(1011.6, 1);
@@ -44,4 +44,21 @@ test("Sugarcane class calculates the proper yield value", () => {
 test("Sugarcane class calculates the proper yield value", () => {
   const sugarcane = new Sugarcane(0);
   expect(sugarcane.getYieldInEuros()).toBe(0);
+});
+
+// TEST getCosts();
+
+test("Sugarcane class calculates the proper costs value", () => {
+  const sugarcane = new Sugarcane(0);
+  expect(sugarcane.getCosts()).toBe(0);
+});
+
+test("Sugarcane class calculates the proper costs value", () => {
+  const sugarcane = new Sugarcane(456);
+  expect(sugarcane.getCosts()).toBe(75696);
+});
+
+test("Wheat class calculates the proper costs value", () => {
+  const wheat = new Wheat(123);
+  expect(wheat.getCosts()).toBe(41820);
 });
