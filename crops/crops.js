@@ -36,4 +36,6 @@ class Sugarcane extends Crop {
     return (this.acres * 2.6) ** 1.1;
   }
 }
+
+console.log("test");
 module.exports = { Crop, Wheat, Sugarcane };
